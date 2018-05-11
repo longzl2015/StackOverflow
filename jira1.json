@@ -1,0 +1,532 @@
+    {
+        "expand": "transitions",
+        "transitions": [
+            {
+                "id": "301",
+                "name": "停止进行",
+                "to": {
+                    "self": "http://10.100.1.17:8080/rest/api/2/status/1",
+                    "description": "The issue is open and ready for the assignee to start work on it.",
+                    "iconUrl": "http://10.100.1.17:8080/images/icons/statuses/open.png",
+                    "name": "打开",
+                    "id": "1",
+                    "statusCategory": {
+                        "self": "http://10.100.1.17:8080/rest/api/2/statuscategory/2",
+                        "id": 2,
+                        "key": "new",
+                        "colorName": "blue-gray",
+                        "name": "New"
+                    }
+                },
+                "fields": {}
+            },
+            {
+                "id": "5",
+                "name": "解决问题",
+                "to": {
+                    "self": "http://10.100.1.17:8080/rest/api/2/status/5",
+                    "description": "A resolution has been taken, and it is awaiting verification by reporter. From here issues are either reopened, or are closed.",
+                    "iconUrl": "http://10.100.1.17:8080/images/icons/statuses/resolved.png",
+                    "name": "已解决",
+                    "id": "5",
+                    "statusCategory": {
+                        "self": "http://10.100.1.17:8080/rest/api/2/statuscategory/3",
+                        "id": 3,
+                        "key": "done",
+                        "colorName": "green",
+                        "name": "Complete"
+                    }
+                },
+                "fields": {
+                    "customfield_10100": {
+                        "required": true,
+                        "schema": {
+                            "type": "array",
+                            "items": "string",
+                            "custom": "com.atlassian.jira.plugin.system.customfieldtypes:labels",
+                            "customId": 10100
+                        },
+                        "name": "缺陷原因",
+                        "autoCompleteUrl": "http://10.100.1.17:8080/rest/api/1.0/labels/34748/suggest?customFieldId=10100&query=",
+                        "operations": [
+                            "add",
+                            "set",
+                            "remove"
+                        ]
+                    },
+                    "customfield_10400": {
+                        "required": false,
+                        "schema": {
+                            "type": "number",
+                            "custom": "com.atlassian.jira.plugin.system.customfieldtypes:float",
+                            "customId": 10400
+                        },
+                        "name": "花费时间",
+                        "operations": [
+                            "set"
+                        ]
+                    },
+                    "duedate": {
+                        "required": false,
+                        "schema": {
+                            "type": "date",
+                            "system": "duedate"
+                        },
+                        "name": "到期日",
+                        "operations": [
+                            "set"
+                        ]
+                    },
+                    "fixVersions": {
+                        "required": false,
+                        "schema": {
+                            "type": "array",
+                            "items": "version",
+                            "system": "fixVersions"
+                        },
+                        "name": "修复版本",
+                        "operations": [
+                            "set",
+                            "add",
+                            "remove"
+                        ],
+                        "allowedValues": [
+                            {
+                                "self": "http://10.100.1.17:8080/rest/api/latest/version/12831",
+                                "id": "12831",
+                                "name": "3.1.0",
+                                "archived": false,
+                                "released": false,
+                                "projectId": 11701
+                            },
+                            {
+                                "self": "http://10.100.1.17:8080/rest/api/latest/version/13009",
+                                "id": "13009",
+                                "name": "2.x",
+                                "archived": false,
+                                "released": false,
+                                "projectId": 11701
+                            },
+                            {
+                                "self": "http://10.100.1.17:8080/rest/api/latest/version/13032",
+                                "id": "13032",
+                                "description": "产品人员维护",
+                                "name": "需求池",
+                                "archived": false,
+                                "released": false,
+                                "projectId": 11701
+                            },
+                            {
+                                "self": "http://10.100.1.17:8080/rest/api/latest/version/13045",
+                                "id": "13045",
+                                "description": "产品、测试共同维护",
+                                "name": "待确认需求",
+                                "archived": false,
+                                "released": false,
+                                "projectId": 11701
+                            },
+                            {
+                                "self": "http://10.100.1.17:8080/rest/api/latest/version/13048",
+                                "id": "13048",
+                                "name": "3.2.0",
+                                "archived": false,
+                                "released": false,
+                                "projectId": 11701
+                            },
+                            {
+                                "self": "http://10.100.1.17:8080/rest/api/latest/version/13053",
+                                "id": "13053",
+                                "description": "平安项目需求",
+                                "name": "3.1.1-pingan",
+                                "archived": false,
+                                "released": false,
+                                "projectId": 11701
+                            },
+                            {
+                                "self": "http://10.100.1.17:8080/rest/api/latest/version/13210",
+                                "id": "13210",
+                                "name": "废弃需求",
+                                "archived": false,
+                                "released": false,
+                                "projectId": 11701
+                            },
+                            {
+                                "self": "http://10.100.1.17:8080/rest/api/latest/version/13803",
+                                "id": "13803",
+                                "name": "3.1.1-12306",
+                                "archived": false,
+                                "released": false,
+                                "projectId": 11701
+                            },
+                            {
+                                "self": "http://10.100.1.17:8080/rest/api/latest/version/13808",
+                                "id": "13808",
+                                "description": "日常迭代",
+                                "name": "3.3.0",
+                                "archived": false,
+                                "released": false,
+                                "projectId": 11701
+                            },
+                            {
+                                "self": "http://10.100.1.17:8080/rest/api/latest/version/14301",
+                                "id": "14301",
+                                "name": "3.4.0",
+                                "archived": false,
+                                "released": false,
+                                "projectId": 11701
+                            },
+                            {
+                                "self": "http://10.100.1.17:8080/rest/api/latest/version/14702",
+                                "id": "14702",
+                                "description": "离线决策、评分卡（分箱）",
+                                "name": "3.5.0",
+                                "archived": false,
+                                "released": false,
+                                "projectId": 11701
+                            },
+                            {
+                                "self": "http://10.100.1.17:8080/rest/api/latest/version/14801",
+                                "id": "14801",
+                                "description": "分析管理",
+                                "name": "3.5.x",
+                                "archived": false,
+                                "released": false,
+                                "projectId": 11701
+                            },
+                            {
+                                "self": "http://10.100.1.17:8080/rest/api/latest/version/15706",
+                                "id": "15706",
+                                "name": "3.6.0",
+                                "archived": false,
+                                "released": false,
+                                "projectId": 11701
+                            },
+                            {
+                                "self": "http://10.100.1.17:8080/rest/api/latest/version/16011",
+                                "id": "16011",
+                                "name": "3.6.0-兴业",
+                                "archived": false,
+                                "released": false,
+                                "projectId": 11701
+                            },
+                            {
+                                "self": "http://10.100.1.17:8080/rest/api/latest/version/16208",
+                                "id": "16208",
+                                "name": "3.6.0-标准版",
+                                "archived": false,
+                                "released": false,
+                                "projectId": 11701
+                            }
+                        ]
+                    },
+                    "resolution": {
+                        "required": true,
+                        "schema": {
+                            "type": "resolution",
+                            "system": "resolution"
+                        },
+                        "name": "解决结果",
+                        "operations": [
+                            "set"
+                        ],
+                        "allowedValues": [
+                            {
+                                "self": "http://10.100.1.17:8080/rest/api/latest/resolution/1",
+                                "name": "已修复",
+                                "id": "1"
+                            },
+                            {
+                                "self": "http://10.100.1.17:8080/rest/api/latest/resolution/2",
+                                "name": "不修复",
+                                "id": "2"
+                            },
+                            {
+                                "self": "http://10.100.1.17:8080/rest/api/latest/resolution/10100",
+                                "name": "延期修复",
+                                "id": "10100"
+                            },
+                            {
+                                "self": "http://10.100.1.17:8080/rest/api/latest/resolution/3",
+                                "name": "重复缺陷",
+                                "id": "3"
+                            },
+                            {
+                                "self": "http://10.100.1.17:8080/rest/api/latest/resolution/4",
+                                "name": "描述不完整",
+                                "id": "4"
+                            },
+                            {
+                                "self": "http://10.100.1.17:8080/rest/api/latest/resolution/5",
+                                "name": "无法重现",
+                                "id": "5"
+                            },
+                            {
+                                "self": "http://10.100.1.17:8080/rest/api/latest/resolution/10001",
+                                "name": "不是缺陷",
+                                "id": "10001"
+                            },
+                            {
+                                "self": "http://10.100.1.17:8080/rest/api/latest/resolution/10000",
+                                "name": "Done",
+                                "id": "10000"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "id": "2",
+                "name": "关闭问题",
+                "to": {
+                    "self": "http://10.100.1.17:8080/rest/api/2/status/6",
+                    "description": "The issue is considered finished, the resolution is correct. Issues which are closed can be reopened.",
+                    "iconUrl": "http://10.100.1.17:8080/images/icons/statuses/closed.png",
+                    "name": "关闭",
+                    "id": "6",
+                    "statusCategory": {
+                        "self": "http://10.100.1.17:8080/rest/api/2/statuscategory/3",
+                        "id": 3,
+                        "key": "done",
+                        "colorName": "green",
+                        "name": "Complete"
+                    }
+                },
+                "fields": {
+                    "customfield_10100": {
+                        "required": true,
+                        "schema": {
+                            "type": "array",
+                            "items": "string",
+                            "custom": "com.atlassian.jira.plugin.system.customfieldtypes:labels",
+                            "customId": 10100
+                        },
+                        "name": "缺陷原因",
+                        "autoCompleteUrl": "http://10.100.1.17:8080/rest/api/1.0/labels/34748/suggest?customFieldId=10100&query=",
+                        "operations": [
+                            "add",
+                            "set",
+                            "remove"
+                        ]
+                    },
+                    "customfield_10400": {
+                        "required": false,
+                        "schema": {
+                            "type": "number",
+                            "custom": "com.atlassian.jira.plugin.system.customfieldtypes:float",
+                            "customId": 10400
+                        },
+                        "name": "花费时间",
+                        "operations": [
+                            "set"
+                        ]
+                    },
+                    "duedate": {
+                        "required": false,
+                        "schema": {
+                            "type": "date",
+                            "system": "duedate"
+                        },
+                        "name": "到期日",
+                        "operations": [
+                            "set"
+                        ]
+                    },
+                    "fixVersions": {
+                        "required": false,
+                        "schema": {
+                            "type": "array",
+                            "items": "version",
+                            "system": "fixVersions"
+                        },
+                        "name": "修复版本",
+                        "operations": [
+                            "set",
+                            "add",
+                            "remove"
+                        ],
+                        "allowedValues": [
+                            {
+                                "self": "http://10.100.1.17:8080/rest/api/latest/version/12831",
+                                "id": "12831",
+                                "name": "3.1.0",
+                                "archived": false,
+                                "released": false,
+                                "projectId": 11701
+                            },
+                            {
+                                "self": "http://10.100.1.17:8080/rest/api/latest/version/13009",
+                                "id": "13009",
+                                "name": "2.x",
+                                "archived": false,
+                                "released": false,
+                                "projectId": 11701
+                            },
+                            {
+                                "self": "http://10.100.1.17:8080/rest/api/latest/version/13032",
+                                "id": "13032",
+                                "description": "产品人员维护",
+                                "name": "需求池",
+                                "archived": false,
+                                "released": false,
+                                "projectId": 11701
+                            },
+                            {
+                                "self": "http://10.100.1.17:8080/rest/api/latest/version/13045",
+                                "id": "13045",
+                                "description": "产品、测试共同维护",
+                                "name": "待确认需求",
+                                "archived": false,
+                                "released": false,
+                                "projectId": 11701
+                            },
+                            {
+                                "self": "http://10.100.1.17:8080/rest/api/latest/version/13048",
+                                "id": "13048",
+                                "name": "3.2.0",
+                                "archived": false,
+                                "released": false,
+                                "projectId": 11701
+                            },
+                            {
+                                "self": "http://10.100.1.17:8080/rest/api/latest/version/13053",
+                                "id": "13053",
+                                "description": "平安项目需求",
+                                "name": "3.1.1-pingan",
+                                "archived": false,
+                                "released": false,
+                                "projectId": 11701
+                            },
+                            {
+                                "self": "http://10.100.1.17:8080/rest/api/latest/version/13210",
+                                "id": "13210",
+                                "name": "废弃需求",
+                                "archived": false,
+                                "released": false,
+                                "projectId": 11701
+                            },
+                            {
+                                "self": "http://10.100.1.17:8080/rest/api/latest/version/13803",
+                                "id": "13803",
+                                "name": "3.1.1-12306",
+                                "archived": false,
+                                "released": false,
+                                "projectId": 11701
+                            },
+                            {
+                                "self": "http://10.100.1.17:8080/rest/api/latest/version/13808",
+                                "id": "13808",
+                                "description": "日常迭代",
+                                "name": "3.3.0",
+                                "archived": false,
+                                "released": false,
+                                "projectId": 11701
+                            },
+                            {
+                                "self": "http://10.100.1.17:8080/rest/api/latest/version/14301",
+                                "id": "14301",
+                                "name": "3.4.0",
+                                "archived": false,
+                                "released": false,
+                                "projectId": 11701
+                            },
+                            {
+                                "self": "http://10.100.1.17:8080/rest/api/latest/version/14702",
+                                "id": "14702",
+                                "description": "离线决策、评分卡（分箱）",
+                                "name": "3.5.0",
+                                "archived": false,
+                                "released": false,
+                                "projectId": 11701
+                            },
+                            {
+                                "self": "http://10.100.1.17:8080/rest/api/latest/version/14801",
+                                "id": "14801",
+                                "description": "分析管理",
+                                "name": "3.5.x",
+                                "archived": false,
+                                "released": false,
+                                "projectId": 11701
+                            },
+                            {
+                                "self": "http://10.100.1.17:8080/rest/api/latest/version/15706",
+                                "id": "15706",
+                                "name": "3.6.0",
+                                "archived": false,
+                                "released": false,
+                                "projectId": 11701
+                            },
+                            {
+                                "self": "http://10.100.1.17:8080/rest/api/latest/version/16011",
+                                "id": "16011",
+                                "name": "3.6.0-兴业",
+                                "archived": false,
+                                "released": false,
+                                "projectId": 11701
+                            },
+                            {
+                                "self": "http://10.100.1.17:8080/rest/api/latest/version/16208",
+                                "id": "16208",
+                                "name": "3.6.0-标准版",
+                                "archived": false,
+                                "released": false,
+                                "projectId": 11701
+                            }
+                        ]
+                    },
+                    "resolution": {
+                        "required": true,
+                        "schema": {
+                            "type": "resolution",
+                            "system": "resolution"
+                        },
+                        "name": "解决结果",
+                        "operations": [
+                            "set"
+                        ],
+                        "allowedValues": [
+                            {
+                                "self": "http://10.100.1.17:8080/rest/api/latest/resolution/1",
+                                "name": "已修复",
+                                "id": "1"
+                            },
+                            {
+                                "self": "http://10.100.1.17:8080/rest/api/latest/resolution/2",
+                                "name": "不修复",
+                                "id": "2"
+                            },
+                            {
+                             
+                                "name": "延期修复",
+                                "id": "10100"
+                            },
+                            {
+                                ...
+                                "name": "重复缺陷",
+                                "id": "3"
+                            },
+                            {
+                               
+                                "name": "描述不完整",
+                                "id": "4"
+                            },
+                            {
+                               
+                                "name": "无法重现",
+                                "id": "5"
+                            },
+                            {
+                              
+                                "name": "不是缺陷",
+                                "id": "10001"
+                            },
+                            {
+      
+                                "name": "Done",
+                                "id": "10000"
+                            }
+                        ]
+                    }
+                }
+            }
+        ]
+    }
